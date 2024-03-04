@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import CaixaTexto from './src/components/CaixaTexto/CaixaTexto';
-import ImageGremio from './src/components/ImageGremio/ImageGremio';
+import Agrupador from './src/components/Agrupador/Agrupador';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.item}>
-        <ImageGremio />
-      </View>
-      <View style={styles.item}>
-        <CaixaTexto />
-      </View>
+      {times.map((time) => <Agrupador time={time.time} façanha={time.façanha} styles={styles.item} />
+        // <CaixaTime time={time.time} façanha={time.façanha} styles={styles.item} />
+
+      )}
+
     </View>
   );
 }
+let times = [{
+  time: 'Grêmio',
+  façanha: 'O único tri-rebaixado de Porto Alegre'
+},
+{
+  time: 'Internacional',
+  façanha: 'O único campeão do mundo de Porto Alegre'
+}]
 
 const styles = StyleSheet.create({
   container: {
