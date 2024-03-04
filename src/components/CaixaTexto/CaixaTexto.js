@@ -16,11 +16,19 @@ function CaixaTexto(props) {
             borderStyle: 'dotted',
             borderColor: '#fff',
         },
-        Internacional: {}
+        Internacional: {
+            fontSize: 30,
+            color: '#f30f1a',
+            backgroundColor: '#e6676d',
+            padding: 16,
+            borderRadius: 16,
+            borderStyle: 'dotted',
+            borderColor: '#fff',
+        }
 
     }
     return <View>
-        <Text style={Estilo.estiloTexto}>{props.time}! {props.façanha}</Text>
+        <Text style={estilo[time]}>{props.time}! {props.façanha}</Text>
     </View>
 }
 
